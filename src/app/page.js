@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react";
 import Process from "./components/Process";
+import Year from "./components/Year";
 export default function Home() {
   const router = useRouter();
   const [width, setWidth] = useState(0);
@@ -19,11 +20,11 @@ export default function Home() {
   return (
     <div>
       <main className="flex min-h-screen items-center justify-center p-24 gap-3">
-        <h1 className="flex-none text-4xl font-bold">2023</h1>
-        <button className="shrink h-5 w-64">
+        <Year text="2023" />
+        <div className="shrink h-5 w-64">
           <Process width={width} />
-        </button>
-        <h1 className="flex-none text-4xl font-bold">2024</h1>
+        </div>
+        <Year text="2024" />
       </main>
     </div>
   );

@@ -9,9 +9,9 @@ const Process = ({ width }) => {
         }
       `}</style>
       <div
-        className={`h-full bg-white text-black rounded-full container text-center`}
+        className={`w-0 h-full bg-white text-black rounded-full container text-center transition-all duration-1000`}
       ></div>
-      <p>
+      <p className="text-center">
         {width * 10 >=`100` ? `100` : width * 10}
         {"%"}
       </p>
