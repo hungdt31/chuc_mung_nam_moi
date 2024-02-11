@@ -6,10 +6,11 @@ const Process = ({ width }) => {
       <style jsx>{`
         .container {
           width: calc(10% * ${width >= 10 ? 10 : width});
+          border-radius:${width >= 10 ? "9999px" : "9999px 0 0 9999px"} ;
         }
       `}</style>
       <div
-        className={`w-0 h-full bg-white text-black rounded-full container text-center transition-all duration-1000`}
+        className={`w-0 h-full bg-white text-black container text-center transition-all duration-1000`}
       ></div>
       <p className="text-center">
         {width * 10 >=`100` ? `100` : width * 10}

@@ -1,3 +1,154 @@
-*{
+* {
   background: white;
+  box-sizing: border-box;
+}
+
+.primary-ribbon {
+  animation-name: widthFrame;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  width: 0px;
+  height: 150px;
+  background-color: #e43811;
+  background-image: linear-gradient(190deg, #e43811 0%, purple 80%);
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.primary-ribbon2 {
+  animation: reverse;
+  animation-delay: 3s;
+  animation-name: widthFrame;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  width: 350px;
+  height: 300px;
+  background-color: white;
+}
+
+.primary .primary-ribbon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.primary .primary-ribbon:nth-child(2) {
+  animation-name: zFrame;
+  animation-delay: 3s;
+}
+
+.secondary-ribbon {
+  width: 0px;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  height: 150px;
+  background-color: purple;
+}
+
+.secondary .secondary-ribbon:nth-child(1) {
+  animation-name: widthFrame;
+  animation-delay: 2s;
+}
+
+.secondary .secondary-ribbon:nth-child(2) {
+  animation-name: widthFrame2;
+  animation-delay: 4s;
+}
+
+@keyframes widthFrame {
+  0% {
+    display: block;
+    width: 0px;
+  }
+  100% {
+    display: block;
+    width: 350px;
+  }
+}
+
+@keyframes widthFrame2 {
+  0% {
+    display: block;
+    width: 0;
+  }
+
+  100% {
+    display: block;
+    width: 175px;
+  }
+}
+
+.textEffect1 {
+  opacity: 0;
+  animation-name: text-shadow-pop-bl;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.textEffect2 {
+  transform: scale(0);
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes text-shadow-pop-bl {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(5px) translateY(-5px);
+    transform: translateX(5px) translateY(-5px);
+  }
+}
+@keyframes zFrame {
+  0% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 50;
+  }
+}
+
+@keyframes text-shadow-pop-bl {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(5px) translateY(-5px);
+    transform: translateX(5px) translateY(-5px);
+  }
 }
