@@ -18,24 +18,27 @@
 }
 
 .primary-ribbon2 {
-  animation: reverse;
-  animation-delay: 3s;
   animation-name: widthFrame;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  width: 350px;
-  height: 300px;
+  width: 0px;
+  height: 150px;
+  background-color: #e43811;
+  background-image: linear-gradient(190deg, #e43811 0%, purple 80%);
+}
+.primary-ribbon2::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: white;
+  animation: widthFrame 1s linear 3s reverse forwards;
 }
-
-.primary .primary-ribbon:nth-child(1) {
+.primary .primary-ribbon {
   animation-delay: 0s;
-}
-
-.primary .primary-ribbon:nth-child(2) {
-  animation-name: zFrame;
-  animation-delay: 3s;
 }
 
 .secondary-ribbon {
@@ -56,7 +59,6 @@
   animation-name: widthFrame2;
   animation-delay: 4s;
 }
-
 @keyframes widthFrame {
   0% {
     display: block;
@@ -127,14 +129,6 @@
     text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
     -webkit-transform: translateX(5px) translateY(-5px);
     transform: translateX(5px) translateY(-5px);
-  }
-}
-@keyframes zFrame {
-  0% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 50;
   }
 }
 
